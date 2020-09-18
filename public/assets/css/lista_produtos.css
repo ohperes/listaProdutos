@@ -17,6 +17,14 @@ body{
     text-align: center;  
 }
 
+#title2{
+    font-size: 30px;
+    color: #0a0101;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;  
+}
+
 #menu ul {
     border-radius: 10px 10px 0px 0px;
     padding: 1%;

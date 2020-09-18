@@ -39,6 +39,7 @@ $produtos = $crud->getProdutos();
         ?> 
       </div>
     </nav>
+    <h1 id="title2">Lista de Produtos:</h1>
     <table id="table-prod">
       <thead id="thead-prod">
         <tr>

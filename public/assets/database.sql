@@ -15,5 +15,5 @@ CREATE TABLE `usuario` (
   PRIMARY KEY (`id`));
 
 
-/* cadastro de um administrador deve ser fetio no terminal 
+/* cadastro de um administrador deve ser fetio a mão para teste
 insert into usuario (nome, email, senha, tipo) values('root', 'root@root', 'root', '2');
