@@ -29,18 +29,6 @@ class CrudUsuario {
     $this->conexao->exec($sql);
   }
 
-  public function uparUsuarios(Usuario $admin, Usuario $user){
-    if ($admin->tipo == '2'){
-        $sql = "UPDATE usuario SET tipo = '2' WHERE nome = {$user->nome}";
-
-        $this->conexao->exec($sql);
-
-        return true;
-    } else {
-        return false;
-    }
-
-}
 }
 
 //$crud = new CrudUsuario();

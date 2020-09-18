@@ -57,6 +57,8 @@ Class Controller{
   }
 
   public function login(){
+    session_destroy();
+    
     $crud = new CrudUsuario();
    
     $usuario = $crud->getUsuario($_POST['email_login']);
