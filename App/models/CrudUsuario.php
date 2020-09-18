@@ -29,9 +29,15 @@ class CrudUsuario {
     $this->conexao->exec($sql);
   }
 
-}
+  public function emailExistente($email){
+    $consulta = $this->conexao->query("SELECT * FROM usuario WHERE email = '{$email}'");
 
-//$crud = new CrudUsuario();
-//$crud->cadastrar('batata', 'batata', '1', 'batata@root.com');
-//$test = $crud->login('batata');
-//print_r($test);
+    if($consulta->rowCount() != 0){
+      return True;
+    }
+    else{
+      return False;
+    }
+  }
+
+}

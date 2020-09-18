@@ -5,7 +5,7 @@ require_once "App/models/CrudUsuario.php";
 require_once "App/models/Produto.php";
 require_once "App/models/Usuario.php";
 
-#Como no teste não era necessario usar nenhum padrão de projeto, resolvi usar ap'enas um controlador pra tudo.
+#Como não havia necessidade de usar algum padrão de projeto no teste, resolvi apenas usar um controlador para tudo.
 
 Class Controller{
   public function Controller(){
@@ -28,6 +28,14 @@ Class Controller{
     include 'App/views/cadastra_produto.php';
   }
 
+  public function formularioUser(){
+    include 'App/views/cadastro.php';
+  }
+
+  public function formularioLogin(){
+    include 'App/views/login.php';
+  }
+
   public function cadastraProd(){
     $produto = new Produto($_POST['nome_prod'], $_POST['preco_prod'], $_POST['marca_prod'], $_POST['dt_validade']);
     $crud = new CrudProduto();
@@ -38,22 +46,18 @@ Class Controller{
     include 'App/views/lista_produtos.php';
   }
 
-  public function formularioUser(){
-    include 'App/views/cadastro.php';
-  }
-
-  public function formularioLogin(){
-    include 'App/views/login.php';
-  }
-
-
   public function cadastraUser(){
+    
     $usuario = new Usuario($_POST['nome_cad'], $_POST['email_cad'], $_POST['senha_cad'], '1');
 
     $crud = new CrudUsuario();
-    $crud->cadastraUsuario($usuario);
+    if($crud->emailExistente($_POST['email_cad'])){
+      print("Esse email já foi cadastrado");
+    }else{
+      $crud->cadastraUsuario($usuario);
     
-    header('location: App/views/login.php');
+      header('location: App/views/login.php');
+    }
   }
 
   public function login(){

@@ -17,7 +17,7 @@ class Connection {
       }
         
     }catch(PDOException $e){
-        die("Falhou a conexao ou ocorreu um erro banco: " . $e->getMessage()); 
+        die("Falhou a conexao ou ocorreu um erro: " . $e->getMessage()); 
     }
 
     return self::$conexao;

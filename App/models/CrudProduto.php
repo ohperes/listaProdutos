@@ -30,9 +30,3 @@ class CrudProduto {
   }
   
 }
-
-//$crud = new CrudProduto();
-//$test = $crud->getProdutoById(4);
-//$crud->cadastraProd('teste2', '3', 'testemarca2', '2433-12-10');
-//$test = $crud->getProdutos();
-//print_r($test);

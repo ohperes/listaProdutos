@@ -5,8 +5,6 @@ $crud = new CrudProduto();
 $produtos = $crud->getProdutos();
 ?>
 
-
-
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
@@ -15,13 +13,6 @@ $produtos = $crud->getProdutos();
   <script src="public/assets/js/lista_produto.js"></script>
 </head>
 <body>
-<div id="btn-div">
-    <?php 
-      if($_SESSION['usuario']->tipo == "2"){
-        echo '<a href="../../index.php?acao=form-prod"><button id="cadastra-produto">Novo Produto</button></a>';
-      }
-    ?> 
-  </div>
   <div id="container"> 
     <nav id="menu">
       <ul>
@@ -33,15 +24,20 @@ $produtos = $crud->getProdutos();
             ?>
           </label>
         </li>
+        <li id="pesq">
+          <input id="pesquisa-input" name="pesquisa" required="required" type="text" placeholder="Pesquisar..."/>
+        </li>
         <li id="logout"><a href="../../index.php?acao=logout">Sair</a></li>
       </ul>
     </nav>   
     <nav id="sub-nav">
-      <ul>
-        <li id="pesq">
-          <input id="pesquisa-input" name="pesquisa" required="required" type="text" placeholder="Pesquisar..."/>
-        </li>
-      </ul>
+      <div id="btn-div">
+        <?php 
+          if($_SESSION['usuario']->tipo == "2"){
+            echo '<a href="../../index.php?acao=form-prod"><button id="cadastra-produto">Novo Produto</button></a>';
+          }
+        ?> 
+      </div>
     </nav>
     <table id="table-prod">
       <thead id="thead-prod">

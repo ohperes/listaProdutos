@@ -12,14 +12,4 @@ class Usuario{
     $this->senha = $senha;
     $this->tipo  = $tipo;
   }
-
-  public function verificaAdmin($tipo){
-
-    if ($tipo == '2'){
-      return true;
-    } else {
-      return false;
-    }
-
-  }
 }
