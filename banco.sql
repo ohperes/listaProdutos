@@ -13,3 +13,7 @@ CREATE TABLE `usuario` (
   `senha` VARCHAR(30) NOT NULL,
   `tipo` INT(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`));
+
+
+/* cadastro de um administrador deve ser fetio no terminal 
+insert into usuario (nome, email, senha, tipo) values('root', 'root@root', 'root', '2');

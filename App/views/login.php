@@ -6,7 +6,7 @@
 <body>
   <div class="content">      
     <div id="container">
-      <form method="post" action=""> 
+      <form method="post" action="../../index.php?acao=login"> 
         <h1>Login</h1> 
              
         <p> 
@@ -25,7 +25,7 @@
           
         <p class="link">  
           Não possui cadastro?
-          <a href="#paralogin"> Cadastrar-se </a>
+          <a href="../../index.php?acao=form-user"> Cadastrar-se </a>
         </p>
       </form>
     </div>

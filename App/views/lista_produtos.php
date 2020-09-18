@@ -14,8 +14,8 @@ $produtos = $crud->getProdutos();
   <div id="container"> 
     <nav id="menu">
       <ul>
-          <li><label id="title" >* ULTRA Mercado</label></li>
-          <li><a href="#">Sair</a></li>
+        <li><label id="title" >* ULTRA Mercado</label></li>
+        <li><a href="../../index.php?acao=logout">Sair</a></li>
       </ul>
     </nav>   
     <nav id="sub-nav">
